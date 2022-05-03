@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+<link rel="stylesheet" href="style.css">
+<h1>Name:</h1>
+<textarea class="ta" id="NAM" oninput="Appear()"></textarea>
+<button class="XO" id="F1" onclick="Process(this)"></button>
+<button class="XO" id="F2" onclick="Process(this)"></button>
+<button class="XO" id="F3" onclick="Process(this)"></button>
+<button class="XO" id="F4" onclick="Process(this)"></button>
+<button class="XO" id="F5" onclick="Process(this)"></button>
+<button class="XO" id="F6" onclick="Process(this)"></button>
+<button class="XO" id="F7" onclick="Process(this)"></button>
+<button class="XO" id="F8" onclick="Process(this)"></button>
+<button class="XO" id="F9" onclick="Process(this)"></button>
+<label id="PassName">Password:</label>
+<button id="que" onclick="Process2()">Find/Create Match</button>
+<input type="password" id="pass" class="ta"></input>
+<label id="status" class="status"></label>
+<label id="status2" class="status"></label>
+<label id="status3" class="status"></label>
+<script>
+let q=0,GENEz=window.crypto.getRandomValues(new Uint32Array(1)),CUR=-1;
+let GENE=GENEz[0];
+var OP;
+let socket = new WebSocket("ws://41.239.125.110:2999");
+socket.onmessage=function(e){
+if(e.data==1){
+document.getElementById("status").innerHTML="In Queue";
+}
+else if(e.data==2){
+document.getElementById("status").innerHTML="Match Found!";
+CUR=Date.now();
+heartbeat();
+}
+else if(e.data.toString().length>=3){
+OP=e.data;
+async function change(){
+await new Promise(resolve => setTimeout(resolve, 3000));
+document.getElementById("status").innerHTML="Opponent: "+OP;
+}
+change();
+}
+else if(e.data==30){
+CUR=Date.now();
+document.getElementById("status2").innerHTML="Your Turn";
+}
+else if(e.data==31){
+CUR=Date.now();
+document.getElementById("status2").innerHTML="Opponent's Turn";
+}
+else if(e.data==90){
+CUR=-1;
+document.getElementById("status2").innerHTML="You Won!";
+Clear();
+}
+else if(e.data==91){
+CUR=-1;
+document.getElementById("status2").innerHTML="You Lost";
+Clear();
+}
+else if(e.data==92){
+CUR=-1;
+document.getElementById("status2").innerHTML="Tie";
+Clear();
+}
+else{
+let NUM=e.data;
+let CODE="F";
+if(NUM>=10&&NUM<=18){
+NUM-=9;
+CODE+=NUM.toString();
+document.getElementById(CODE).innerHTML='X';
+document.getElementById(CODE).style.color="#FF0000";
+}
+else{
+NUM-=19;
+CODE+=NUM.toString();
+document.getElementById(CODE).innerHTML='O';
+document.getElementById(CODE).style.color="#00FF00";
+}
+}
+};
+async function heartbeat(){
+document.getElementById("status3").innerHTML=(Math.max(Math.floor((20000-(Date.now()-CUR))/1000),0)).toString()+" seconds left";
+await new Promise(resolve => setTimeout(resolve, 500));
+if(CUR>-1)
+heartbeat();
+else
+document.getElementById("status3").innerHTML='';
+}
+async function Clear(){
+await new Promise(resolve => setTimeout(resolve, 3000));
+for(let i=1;i<=9;i++){
+document.getElementById("F"+i.toString()).innerHTML='';
+}
+document.getElementById("status").innerHTML='';
+document.getElementById("status2").innerHTML='';
+q=0;
+Appear();
+}
+function Process(ele){
+socket.send(JSON.stringify([GENE,parseInt(ele.id[1])+9]));
+}
+function Process2(){
+socket.send(JSON.stringify([GENE,document.getElementById("NAM").value]));
+if(!document.getElementById("pass").value.length)
+socket.send(JSON.stringify([GENE,1]));
+else
+socket.send(JSON.stringify([GENE,-1,document.getElementById("pass").value]));
+q=1;
+Appear();
+}
+function Appear(){
+if(document.getElementById("NAM").value.length>=3&&!q){
+document.getElementById("que").style.display="block";
+document.getElementById("PassName").style.display="block";
+document.getElementById("pass").style.display="block";
+}
+else{
+document.getElementById("que").style.display="none";
+document.getElementById("PassName").style.display="none";
+document.getElementById("pass").style.display="none";
+}
+}
+</script>
+<vl></vl>
+<vl2></vl2>
+<vl3></vl3>
+<vl4></vl4>
+<vl5></vl5>
+<vl6></vl6>
+<vl7></vl7>
+<vl8></vl8>
+</html>

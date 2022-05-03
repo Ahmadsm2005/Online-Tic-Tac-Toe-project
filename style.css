@@ -1,0 +1,166 @@
+h1{
+font-size: 6vmin;
+color: rgb(130, 0, 160);
+position: absolute;
+top: 2vmin;
+margin-top: 0;
+left: 4vmin;
+}
+vl{
+border-left-style: solid;
+border-left-width: 45vmin;
+height: 5px;
+position: absolute;
+left: 0%;
+top: 10vmin;
+}
+vl2{
+border-left-style: solid;
+border-left-width: 45vmin;
+height: 1vmin;
+position: absolute;
+left: 0%;
+top: 25vmin;
+}
+vl3{
+border-left-style: solid;
+border-left-width: 45vmin;
+height: 1vmin;
+position: absolute;
+left: 0%;
+top: 40vmin;
+}
+vl4{
+border-left-style: solid;
+border-left-width: 45vmin;
+height: 1vmin;
+position: absolute;
+left: 0%;
+top: 55vmin;
+}
+vl5{
+border-left-style: solid;
+border-left-width: 1vmin;
+height: 45vmin;
+position: absolute;
+left: 0%;
+top: 10vmin;
+}
+vl6{
+border-left-style: solid;
+border-left-width: 1vmin;
+height: 45vmin;
+position: absolute;
+left: 15vmin;
+top: 10vmin;
+}
+vl7{
+border-left-style: solid;
+border-left-width: 1vmin;
+height: 45vmin;
+position: absolute;
+left: 30vmin;
+top: 10vmin;
+}
+vl8{
+border-left-style: solid;
+border-left-width: 1vmin;
+height: 45vmin;
+position: absolute;
+left: 44vmin;
+top: 10vmin;
+}
+.ta{
+resize:none;
+height: 6.5vmin;
+position: absolute;
+font-size: 28px;
+width: 250px;
+}
+#NAM{
+top: 2vmin;
+left: 25vmin;
+}
+.XO{
+height: 15vmin;
+width: 15vmin;
+background-color:rgba(0, 0, 0, 0);
+border-style: none;
+position: absolute;
+font-size: 16vmin;
+line-height: 50%;
+}
+#F1{
+top: 10vmin;
+left: 0;
+}
+#F2{
+top: 10vmin;
+left: 15vmin;
+}
+#F3{
+top: 10vmin;
+left: 30vmin;
+}
+#F4{
+top: 25vmin;
+left: 0;
+}
+#F5{
+top: 25vmin;
+left: 15vmin;
+}
+#F6{
+top: 25vmin;
+left: 30vmin;
+}
+#F7{
+top: 40vmin;
+left: 0;
+}
+#F8{
+top: 40vmin;
+left: 15vmin;
+}
+#F9{
+top: 40vmin;
+left: 30vmin;
+}
+#que{
+border-width: 2px;
+border-color: #000000;
+border-style: solid;
+background-image:linear-gradient(#dc1cf8,#7c2289);
+width: 30vmin;
+height: 12vmin;
+font-size: 4.5vmin;
+position: absolute;
+top: 70vmin;
+display: none;
+}
+.status{
+position: absolute;
+font-size: 6vw;
+left: 0vmin;
+text-align: center;
+}
+#status{
+top: 55vmin;
+}
+#status2{
+top: 70vmin;
+}
+#status3{
+top: 85vmin;
+}
+#pass{
+top: 90vmin;
+left: 28vmin;
+display: none;
+}
+#PassName{
+top: 90vmin;
+position: absolute;
+font-size: 6vmin;
+display: none;
+}
