@@ -22,7 +22,7 @@
 let q=0,GENEz=window.crypto.getRandomValues(new Uint32Array(1)),CUR=-1;
 let GENE=GENEz[0];
 var OP;
-let socket = new WebSocket("ws://41.239.125.110:2999");
+let socket = new WebSocket("ws://xx.xxx.xxx.xxx:2999"); //Input the host I.P address with the port accessed here
 socket.onmessage=function(e){
 if(e.data==1){
 document.getElementById("status").innerHTML="In Queue";
