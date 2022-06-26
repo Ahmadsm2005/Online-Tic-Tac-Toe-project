@@ -1,130 +1,143 @@
+body{
+background-color: #101010;
+}
 h1{
 font-size: 6vmin;
-color: rgb(130, 0, 160);
+color: rgb(255, 255, 160);
 position: absolute;
 top: 2vmin;
 margin-top: 0;
 left: 4vmin;
 }
-vl{
+vl,vl2,vl3,vl4{
 border-left-style: solid;
 border-left-width: 45vmin;
-height: 5px;
+height: 1vmin;
 position: absolute;
+border-color: #DEDEDE;
+}
+vl5,vl6,vl7,vl8{
+border-left-style: solid;
+border-left-width: 1vmin;
+height: 45vmin;
+position: absolute;
+border-color: #DEDEDE;
+}
+vl{
 left: 0%;
-top: 10vmin;
+top: 15vmin;
 }
 vl2{
-border-left-style: solid;
-border-left-width: 45vmin;
-height: 1vmin;
-position: absolute;
 left: 0%;
-top: 25vmin;
+top: 30vmin;
 }
 vl3{
-border-left-style: solid;
-border-left-width: 45vmin;
-height: 1vmin;
-position: absolute;
 left: 0%;
-top: 40vmin;
+top: 45vmin;
 }
 vl4{
-border-left-style: solid;
-border-left-width: 45vmin;
-height: 1vmin;
-position: absolute;
 left: 0%;
-top: 55vmin;
+top: 60vmin;
 }
 vl5{
-border-left-style: solid;
-border-left-width: 1vmin;
-height: 45vmin;
-position: absolute;
 left: 0%;
-top: 10vmin;
+top: 15vmin;
 }
 vl6{
-border-left-style: solid;
-border-left-width: 1vmin;
-height: 45vmin;
-position: absolute;
 left: 15vmin;
-top: 10vmin;
+top: 15vmin;
 }
 vl7{
-border-left-style: solid;
-border-left-width: 1vmin;
-height: 45vmin;
-position: absolute;
 left: 30vmin;
-top: 10vmin;
+top: 15vmin;
 }
 vl8{
-border-left-style: solid;
-border-left-width: 1vmin;
-height: 45vmin;
-position: absolute;
 left: 44vmin;
-top: 10vmin;
+top: 15vmin;
 }
 .ta{
 resize:none;
 height: 6.5vmin;
 position: absolute;
-font-size: 28px;
-width: 250px;
+font-size: 4.5vmin;
+width: 60vmin;
+background-color: #141430;
+border-width: 0;
+padding-top: .5vmin;
+border-radius: 0.8vmin;
+color: #FFFFFF;
+}
+.ta:hover{
+border-width: 0.1vmin;
+border-color: #FFFFFF;
+}
+.ta:focus{
+outline: none;
+background-color: #252545;
 }
 #NAM{
 top: 2vmin;
 left: 25vmin;
 }
 .XO{
-height: 15vmin;
-width: 15vmin;
-background-color:rgba(0, 0, 0, 0);
-border-style: none;
+height: 13vmin;
+width: 13vmin;
+background-image: radial-gradient(#101010, #161616, #232323);
+border-style: hidden;
 position: absolute;
 font-size: 16vmin;
 line-height: 50%;
+opacity: 0%;
+padding-top: 1vmin;
+}
+.XO:hover{
+  opacity: 20%;
+}
+.XO2{
+  height: 13vmin;
+  width: 13vmin;
+  background-image: radial-gradient(#101010, #161616, #232323);
+  border-style: hidden;
+  position: absolute;
+  font-size: 16vmin;
+  line-height: 50%;
+  opacity: 100%;
 }
 #F1{
-top: 10vmin;
-left: 0;
+top: 16.5vmin;
+left: 1.5vmin;
 }
 #F2{
-top: 10vmin;
-left: 15vmin;
+top: 16.5vmin;
+left: 16.5vmin;
 }
 #F3{
-top: 10vmin;
-left: 30vmin;
+top: 16.5vmin;
+left: 30.9vmin;
 }
 #F4{
-top: 25vmin;
-left: 0;
+top: 31.5vmin;
+left: 1.4vmin;
 }
 #F5{
-top: 25vmin;
-left: 15vmin;
+top: 31.5vmin;
+left: 16.4vmin;
 }
 #F6{
-top: 25vmin;
-left: 30vmin;
+top: 31.5vmin;
+left: 30.9vmin;
 }
 #F7{
-top: 40vmin;
-left: 0;
+top: 46.4vmin;
+left: 1.4vmin;
 }
 #F8{
-top: 40vmin;
-left: 15vmin;
+top: 46.4vmin;
+left: 16.4vmin;
 }
 #F9{
-top: 40vmin;
-left: 30vmin;
+top: 46.4vmin;
+left: 30.9vmin;
 }
 #que{
 border-width: 2px;
@@ -140,18 +153,22 @@ display: none;
 }
 .status{
 position: absolute;
-font-size: 6vw;
+font-size: 4vw;
 left: 0vmin;
 text-align: center;
+color: rgb(255, 255, 160);
 }
 #status{
-top: 55vmin;
+top: 65vmin;
+color: rgb(255, 255, 160);
 }
 #status2{
-top: 70vmin;
+top: 75vmin;
+color: rgb(255, 255, 160);
 }
 #status3{
 top: 85vmin;
+color: rgb(255, 255, 160);
 }
 #pass{
 top: 90vmin;
@@ -163,4 +180,5 @@ top: 90vmin;
 position: absolute;
 font-size: 6vmin;
 display: none;
+color: rgb(255, 255, 160);
 }
