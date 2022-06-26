@@ -1,7 +1,7 @@
 var http = require('http');
 var fs = require('fs');
 var url=require('url');
-const ws = require('wss');
+const ws = require('ws');
 const wss = new ws.Server({port:2999},'0.0.0.0');
 function SEND(F,M){
 if(F.readyState==F.OPEN){
