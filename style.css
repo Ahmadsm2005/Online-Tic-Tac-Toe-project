@@ -141,15 +141,28 @@ left: 30.9vmin;
 }
 #que{
 border-width: 2px;
-border-color: #000000;
 border-style: solid;
-background-image:linear-gradient(#dc1cf8,#7c2289);
+color: #FFFFFF;
+background-image:radial-gradient(#101020,#202040);
 width: 30vmin;
 height: 12vmin;
 font-size: 4.5vmin;
 position: absolute;
 top: 70vmin;
 display: none;
+border-color: #000000;
+animation-name: animate;
+animation-duration: 4s;
+animation-fill-mode: forwards;
+animation-iteration-count: infinite;
+}
+@keyframes animate{
+0% {border-color: #000000;}
+50% {border-color: #f7ce16;}
+100% {border-color: #000000;}
+}
+#que:hover{
+border-width: 2px;
 }
 .status{
 position: absolute;
